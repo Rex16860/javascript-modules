@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script type="module">
+
+        // import { Worker, sayHello, sayGoobye, sum } from './scripts/aggregate.mjs';
+
+        // const john = new Worker('john');
+        // john.sayHello('jean');
+
+        // sayHello('john');
+        // sayGoobye('jean');
+
+        // sum(1, 2, 3, 4);
+
+        import * as aggregates from './scripts/aggregate.mjs';
+
+        const john = new aggregates.Worker('john');
+        john.sayHello('jean');
+
+        aggregates.sayHello('john');
+        aggregates.sayGoobye('jean');
+
+        const r = aggregates.sum(1, 2, 3, 4);
+        console.info(r);
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script type="module">
+
+        import * as object from './scripts/module-object.mjs';
+
+        console.info(object);
+        console.info(object.firstName);
+        console.info(object.middleName);
+        console.info(object.lastName);
+
+        object.greet();
+
+        const person = new object.Items();
+        console.info(person);
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="scripts/multipleExport.mjs"></script>
+    <script type="module" src="scripts/multipleExport2.mjs"></script>
+</head>
+
+<body>
+    <script type="module">
+
+        import { employee, sum, Company } from './scripts/multipleExport.mjs';
+        import { employee as karyawan, sum as total, Company as perusahaan } from './scripts/multipleExport2.mjs';
+
+        console.info(employee);
+        console.info(sum(1, 2, 3, 4));
+        const x = new Company();
+
+        console.info(x);
+        console.info(karyawan);
+        console.info(total(1, 2, 3, 4));
+        const y = new perusahaan();
+        console.info(x);
+
+    </script>
+</body>
+
+</html>
